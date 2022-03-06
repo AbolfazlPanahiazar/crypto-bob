@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/crypto-bob/static/css/main.827893e8.css",
+    "main.js": "/crypto-bob/static/js/main.4e8686c8.js",
+    "static/js/787.c5f56614.chunk.js": "/crypto-bob/static/js/787.c5f56614.chunk.js",
+    "static/media/logo.png": "/crypto-bob/static/media/logo.ab90555b6d03bc11f983.png",
+    "index.html": "/crypto-bob/index.html",
+    "main.827893e8.css.map": "/crypto-bob/static/css/main.827893e8.css.map",
+    "main.4e8686c8.js.map": "/crypto-bob/static/js/main.4e8686c8.js.map",
+    "787.c5f56614.chunk.js.map": "/crypto-bob/static/js/787.c5f56614.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.827893e8.css",
+    "static/js/main.4e8686c8.js"
+  ]
+}
