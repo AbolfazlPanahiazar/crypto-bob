@@ -7,11 +7,19 @@ interface IBobCardProps {
   title: string;
   price: number;
   image: string;
+  onCardClick: (i: number) => void;
+  index: number;
 }
 
-const BobCard: FC<IBobCardProps> = ({ image, title, price }): ReactElement => {
+const BobCard: FC<IBobCardProps> = ({
+  image,
+  title,
+  price,
+  index,
+  onCardClick,
+}): ReactElement => {
   return (
-    <CardWrapper>
+    <CardWrapper onClick={() => onCardClick(index)}>
       <CardImage src={image} alt={title} />
       <div
         style={{

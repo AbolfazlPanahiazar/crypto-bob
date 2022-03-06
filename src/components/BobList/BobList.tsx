@@ -4,9 +4,10 @@ import BobCard from "../BobCard/BobCard";
 
 interface IBobListProps {
   cards: any[];
+  onCardClick: (i: number) => void;
 }
 
-const BobList: FC<IBobListProps> = ({ cards }): ReactElement => {
+const BobList: FC<IBobListProps> = ({ cards, onCardClick }): ReactElement => {
   return (
     <div
       style={{
@@ -16,8 +17,11 @@ const BobList: FC<IBobListProps> = ({ cards }): ReactElement => {
         scrollbarWidth: "none",
       }}
     >
-      {cards.map((i) => (
+      {cards.map((i, index) => (
         <BobCard
+          key={i.image_preview_url}
+          index={index}
+          onCardClick={onCardClick}
           image={i.image_preview_url}
           title={i.name}
           price={i.traits[0].value}
