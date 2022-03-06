@@ -1,9 +1,30 @@
 import { FC, ReactElement } from "react";
 
-interface IBobListProps {}
+import BobCard from "../BobCard/BobCard";
 
-const BobList: FC<IBobListProps> = (): ReactElement => {
-  return <div></div>;
+interface IBobListProps {
+  cards: any[];
+}
+
+const BobList: FC<IBobListProps> = ({ cards }): ReactElement => {
+  return (
+    <div
+      style={{
+        width: "100%",
+        whiteSpace: "nowrap",
+        overflowX: "scroll",
+        scrollbarWidth: "none",
+      }}
+    >
+      {cards.map((i) => (
+        <BobCard
+          image={i.image_preview_url}
+          title={i.name}
+          price={i.traits[0].value}
+        />
+      ))}
+    </div>
+  );
 };
 
 export default BobList;

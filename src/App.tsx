@@ -2,7 +2,7 @@ import { FC, useEffect, useState } from "react";
 import axios from "axios";
 
 import Header from "./components/Header/Header";
-import BobCard from "./components/BobCard/BobCard";
+import BobList from "./components/BobList/BobList";
 import { App, Container } from "./app.styles";
 
 const Application: FC = () => {
@@ -22,15 +22,7 @@ const Application: FC = () => {
     <App>
       <Container>
         <Header />
-        <div>
-          {records.map((i) => (
-            <BobCard
-              image={i.image_preview_url}
-              title={i.name}
-              price={i.traits[0].value}
-            />
-          ))}
-        </div>
+        <BobList cards={records} />
       </Container>
     </App>
   );

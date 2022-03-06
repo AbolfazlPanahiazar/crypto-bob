@@ -7,6 +7,10 @@ export const CardWrapper = styled.div`
   background-color: #1e2e3e;
   padding-bottom: 20px;
   overflow: hidden;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: inline-block;
 `;
 
 export const CardImage = styled.img`
