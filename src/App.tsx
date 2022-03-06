@@ -1,15 +1,36 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
+import axios from "axios";
 
 import Header from "./components/Header/Header";
 import BobCard from "./components/BobCard/BobCard";
 import { App, Container } from "./app.styles";
 
 const Application: FC = () => {
+  const [records, setRecords] = useState<any[]>([]);
+
+  useEffect(() => {
+    const getRecords = async () => {
+      const openseaData = await axios.get(
+        "https://testnets-api.opensea.io/assets?asset_contract_address=0x5Eec0802561561De1B5Ba2af6bABfd2347b7C569&order_direction=asc"
+      );
+      setRecords(openseaData.data.assets);
+    };
+    getRecords();
+  }, []);
+
   return (
     <App>
       <Container>
         <Header />
-        <BobCard image="https://lh3.googleusercontent.com/wQD1YL6N4OdbFCY8T0M2Sj52S670hjMNYRwfOW8zy8FRcvVN0WYau-YQVwMmgoiQ5ySb3Pjt1OsfuYIrM6K3o9nWaNOrlz7iKnw9kw=w600" title="Test title" price={0.1} />
+        <div>
+          {records.map((i) => (
+            <BobCard
+              image={i.image_preview_url}
+              title={i.name}
+              price={i.traits[0].value}
+            />
+          ))}
+        </div>
       </Container>
     </App>
   );
