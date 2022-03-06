@@ -12,9 +12,6 @@ const BobList: FC<IBobListProps> = ({ cards, onCardClick }): ReactElement => {
     <div
       style={{
         width: "100%",
-        whiteSpace: "nowrap",
-        overflowX: "scroll",
-        scrollbarWidth: "none",
       }}
     >
       {cards.map((i, index) => (

@@ -11,6 +11,7 @@ export const CardWrapper = styled.div`
   margin-left: 10px;
   margin-right: 10px;
   display: inline-block;
+  margin-top: 10px;
 `;
 
 export const CardImage = styled.img`
