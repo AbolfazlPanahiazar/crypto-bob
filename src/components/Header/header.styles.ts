@@ -40,3 +40,14 @@ export const MenuItem = styled.a`
   margin-left: 20px;
   color: white;
 `;
+
+export const LoginButton = styled.div`
+  background: linear-gradient(to right, #59f9b9, #66feea);
+  margin-left: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  border-radius: 20px;
+  color: black;
+`;

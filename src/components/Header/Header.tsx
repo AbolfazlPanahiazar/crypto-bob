@@ -7,6 +7,7 @@ import {
   InputContainer,
   SearchInput,
   MenuItem,
+  LoginButton,
 } from "./header.styles";
 import logo from "../../assets/images/logo.png";
 
@@ -26,7 +27,7 @@ const Header: FC = () => {
           />
         </InputContainer>
       </div>
-      <div>
+      <div style={{ display: "flex", alignItems: "center" }}>
         <MenuItem href="mailto:abolfazlpanahiazar@gmail.com">
           Contact Me
         </MenuItem>
@@ -39,6 +40,7 @@ const Header: FC = () => {
         <MenuItem href="https://github.com/abolfazlPanahiazar" target="_blank">
           Github
         </MenuItem>
+        <LoginButton>Login</LoginButton>
       </div>
     </HeaderContainer>
   );
